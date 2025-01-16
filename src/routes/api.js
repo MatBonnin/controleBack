@@ -152,4 +152,16 @@ router.delete('/miels/:id', async (req, res) => {
   }
 });
 
+router.post('/tags', async (req, res) => {
+  try {
+    // Recherche de l'utilisateur
+    const { tag } = req.body;
+
+    const tags = await Tag.create({ nom: tag });
+
+    res.json({ tags });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 module.exports = router;
