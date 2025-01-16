@@ -5,6 +5,7 @@ const bcrypt = require('bcryptjs');
 const dotenv = require('dotenv');
 const User = require('../models/User');
 const Miel = require('../models/Miel');
+const Tag = require('../models/Tag');
 const { Op } = require('sequelize');
 dotenv.config();
 

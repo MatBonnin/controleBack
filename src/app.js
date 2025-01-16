@@ -21,7 +21,7 @@ app.use(cors(corsOptions));
 app.use('/', authenticateToken, authRouter);
 
 sequelize
-  .sync({ force: false })
+  .sync({ force: true })
   .then(async () => {
     console.log('Base de données synchronisée');
   })
